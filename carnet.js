@@ -1,10 +1,8 @@
 var contactsTrie
-var valNom;
-var valPrenom;
 let url = new URL(window.location);
 let paramString = url.search;
 let urlParams = new URLSearchParams(url.search);
-var newContact;
+let contact;
 
 $(document).ready(function () {
     // on affiche ce message quand la page est chargée
@@ -16,7 +14,7 @@ $(document).ready(function () {
 
     //on affiche la liste de contacts dans une liste (url visulaisation carnet)
     afficherContacts();
-    
+
     // ici on passe le nom et le prénom en paramètre url pour afficher un contact
     let valNom = urlParams.get('nom');
     let valPrenom = urlParams.get('prenom');
@@ -24,6 +22,8 @@ $(document).ready(function () {
     //ici on affiche le contact avec les paramètres de l'URL
     $('#contactNom').html(valNom);
     $('#contactPrenom').html(valPrenom);
+
+    //ajouterDonnees();
 
 });
 
@@ -50,3 +50,14 @@ function afficherContacts() {
     }
     $('#listeDeContacts').html(listeContactsHtml);
 }
+
+/*
+function ajouterDonnees() {
+    for(let donnees in contact)
+    $('#'+donnees).text(contact[donnees]);
+
+    let anneeDeNaissance = parseInt(contact.dateDeNaissance.split('/')[2]);
+    $('#age').text(2021-anneeDeNaissance);
+
+}
+*/
