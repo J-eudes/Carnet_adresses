@@ -1,0 +1,28 @@
+h1 {
+    padding: 20px;    
+    text-align: center;    
+}
+.body {
+    background-color: lightskyblue ;
+}
+
+.container-fluid{
+    padding: 10px;
+    background-color: #054d5c;    
+}
+
+#index{
+    color: yellow;
+}
+#lettre {
+    color: yellow;
+}
+#nav-index{
+    padding: 0px;
+}
+/*
+thead {
+    background-color: #054d5c; 
+    color: yellow;
+}
+*/
